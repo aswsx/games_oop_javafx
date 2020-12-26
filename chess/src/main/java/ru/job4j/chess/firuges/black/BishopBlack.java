@@ -8,11 +8,13 @@ public class BishopBlack implements Figure {
     private final Cell position;
 
     public BishopBlack(final Cell ps) {
+
         position = ps;
     }
 
     @Override
     public Cell position() {
+
         return position;
     }
 
@@ -21,16 +23,18 @@ public class BishopBlack implements Figure {
         if (!isDiagonal(position, dest)) {
             throw new ImpossibleMoveException();
         }
-        int size = Math.abs(position().getX() - dest.getX());
+        int posX = position().getX();
+        int posY = position().getY();
+        int destX = dest.getX();
+        int destY = dest.getY();
+        int size = Math.abs(posX - destX);
         Cell[] steps = new Cell[size];
-        int x = position().getX();
-        int y = position().getY();
-        int deltaX = x - dest.getX() > 0 ? -1 : 1;
-        int deltaY = y - dest.getY() > 0 ? -1 : 1;
+        int deltaX = posX - destX > 0 ? -1 : 1;
+        int deltaY = posY - destY > 0 ? -1 : 1;
         for (int index = 0; index < size; index++) {
-            x += deltaX;
-            y += deltaY;
-            steps[index] = Cell.findBy(x, y);
+            posX += deltaX;
+            posY += deltaY;
+            steps[index] = Cell.findBy(posX, posY);
         }
         return steps;
     }

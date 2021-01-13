@@ -20,12 +20,12 @@ public class Logic {
 
     public boolean move(Cell source, Cell dest) {
         boolean rst = false;
-        int index = findBy(source);
-        if (index != -1) {
-            Cell[] steps = figures[index].way(dest);
+        int ind = findBy(source);
+        if (ind != -1) {
+            Cell[] steps = figures[ind].way(dest);
             if (isFree(steps)) {
                 rst = true;
-                figures[index] = figures[index].copy(dest);
+                figures[ind] = figures[ind].copy(dest);
             }
         }
         return rst;

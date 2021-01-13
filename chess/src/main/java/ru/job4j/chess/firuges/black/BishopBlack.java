@@ -8,13 +8,11 @@ public class BishopBlack implements Figure {
     private final Cell position;
 
     public BishopBlack(final Cell ps) {
-
         position = ps;
     }
 
     @Override
     public Cell position() {
-
         return position;
     }
 

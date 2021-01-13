@@ -75,7 +75,6 @@ public class Puzzle extends Application {
 
     private void checkWinner() {
         if (this.logic.isWin()) {
-            logic.toString();
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle(JOB4J);
             alert.setHeaderText(null);

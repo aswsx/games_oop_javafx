@@ -27,7 +27,7 @@ public class BishopBlackTest {
     @Test
     public void testCopy() {
         Cell step = Cell.E4;
-        BishopBlack bishopBlack = new BishopBlack(Cell.D3);
+        BishopBlack bishopBlack = new BishopBlack(Cell.C2);
         assertThat(bishopBlack.copy(step).position(), is(step));
     }
 }

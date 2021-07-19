@@ -7,7 +7,6 @@ import ru.job4j.chess.firuges.Cell;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
-
 public class BishopBlackTest {
 
     @Test
